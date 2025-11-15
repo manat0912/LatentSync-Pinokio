@@ -28,8 +28,8 @@ module.exports = async (kernel) => {
         venv: "env",                // Edit this to customize the venv folder path
         path: "app",                // Edit this to customize the path to start the shell from
         env: {
-          HF_TOKEN: "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",
-          HUGGINGFACE_HUB_TOKEN: "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"
+          HF_TOKEN: "",
+          HUGGINGFACE_HUB_TOKEN: ""
         },
         message: [
           "python.exe -m pip install --upgrade pip setuptools wheel",
@@ -129,16 +129,16 @@ module.exports = async (kernel) => {
             path: "app",
             message: [
               // Torch checkpoints
-              "powershell -Command \"New-Item -ItemType Directory -Force -Path '{{homedir}}\ .cache\torch\hub\checkpoints'\"",
-              "powershell -Command \"Copy-Item -Path '{{cwd}}\checkpoints\auxiliary\2DFAN4-cd938726ad.zip' -Destination '{{homedir}}\ .cache\torch\hub\checkpoints\2DFAN4-cd938726ad.zip'\"",
-              "powershell -Command \"Copy-Item -Path '{{cwd}}\checkpoints\auxiliary\s3fd-619a316812.pth' -Destination '{{homedir}}\ .cache\torch\hub\checkpoints\s3fd-619a316812.pth'\"",
-              "powershell -Command \"Copy-Item -Path '{{cwd}}\checkpoints\auxiliary\vgg16-397923af.pth' -Destination '{{homedir}}\ .cache\torch\hub\checkpoints\vgg16-397923af.pth'\"",
+              "powershell -Command \"New-Item -ItemType Directory -Force -Path '{{homedir}}\\ .cache\\torch\\hub\\checkpoints'\"",
+              "powershell -Command \"Copy-Item -Path '{{cwd}}\\checkpoints\\auxiliary\\2DFAN4-cd938726ad.zip' -Destination '{{homedir}}\\ .cache\\torch\\hub\\checkpoints\\2DFAN4-cd938726ad.zip'\"",
+              "powershell -Command \"Copy-Item -Path '{{cwd}}\\checkpoints\\auxiliary\\s3fd-619a316812.pth' -Destination '{{homedir}}\\ .cache\\torch\\hub\\checkpoints\\s3fd-619a316812.pth'\"",
+              "powershell -Command \"Copy-Item -Path '{{cwd}}\\checkpoints\\auxiliary\\vgg16-397923af.pth' -Destination '{{homedir}}\\ .cache\\torch\\hub\\checkpoints\\vgg16-397923af.pth'\"",
 
               // FFmpeg binary + license
-              "powershell -Command \"New-Item -ItemType Directory -Force -Path '{{homedir}}\ .cache\ffmpeg\bin'\"",
-              "powershell -Command \"Copy-Item -Path '{{cwd}}\bin\ffmpeg.exe' -Destination '{{homedir}}\ .cache\ffmpeg\bin\ffmpeg.exe'\"",
-              "powershell -Command \"Copy-Item -Path '{{cwd}}\bin\ffprobe.exe' -Destination '{{homedir}}\ .cache\ffmpeg\bin\ffprobe.exe'\"",
-              "powershell -Command \"Copy-Item -Path '{{cwd}}\bin\LICENSE.txt' -Destination '{{homedir}}\ .cache\ffmpeg\bin\LICENSE.txt'\""
+              "powershell -Command \"New-Item -ItemType Directory -Force -Path '{{homedir}}\\ .cache\\ffmpeg\\bin'\"",
+              "powershell -Command \"Copy-Item -Path '{{cwd}}\\bin\\ffmpeg.exe' -Destination '{{homedir}}\\ .cache\\ffmpeg\\bin\\ffmpeg.exe'\"",
+              "powershell -Command \"Copy-Item -Path '{{cwd}}\\bin\\ffprobe.exe' -Destination '{{homedir}}\\ .cache\\ffmpeg\\bin\\ffprobe.exe'\"",
+              "powershell -Command \"Copy-Item -Path '{{cwd}}\\bin\\LICENSE.txt' -Destination '{{homedir}}\\ .cache\\ffmpeg\\bin\\LICENSE.txt'\""
             ]
           }
         },
