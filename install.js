@@ -28,8 +28,8 @@ module.exports = async (kernel) => {
         venv: "env",                // Edit this to customize the venv folder path
         path: "app",                // Edit this to customize the path to start the shell from
         env: {
-          HF_TOKEN: "",
-          HUGGINGFACE_HUB_TOKEN: ""
+          HF_TOKEN: "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",
+          HUGGINGFACE_HUB_TOKEN: "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"
         },
         message: [
           "python.exe -m pip install --upgrade pip setuptools wheel",
