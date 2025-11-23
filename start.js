@@ -14,7 +14,7 @@ module.exports = async (kernel) => {
          },                   // Edit this to customize environment variables (see documentation)
         path: "app",                // Edit this to customize the path to start the shell from
         message: [
-          "python -u gradio_app.py",    // Edit with your custom commands
+          "python -u gradio_app.py" // inbrowser=False, share=False
         ],
         on: [{
           // The regular expression pattern to monitor.
