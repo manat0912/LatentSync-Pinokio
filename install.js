@@ -6,7 +6,7 @@ module.exports = {
     {
       method: "shell.run",
       params: {
-        message: "git clone https://github.com/bytedance/LatentSync app"
+        message: "git clone https://github.com/manat0912/LatentSync app"
       }
     },
     {
